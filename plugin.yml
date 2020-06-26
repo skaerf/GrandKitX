@@ -1,0 +1,12 @@
+name: GrandKitX
+version: 1.0
+main: net.skaerf.grandkit.Main
+description: GrandKitX - Controller of the Galaxies
+author: skaerf
+softdepend: [PlaceholderAPI, BountifulAPI]
+commands:
+
+   staffchat:
+      usage: /staffchat [message]
+      description: Chat with only staff members
+      aliases: [sc, staffc, schat]
