@@ -7,8 +7,6 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import net.skaerf.grandkit.Maps;
-
 public class DuelCommand implements CommandExecutor {
 	
 	@Override
@@ -38,8 +36,7 @@ public class DuelCommand implements CommandExecutor {
 				player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&b&lGrandKit Duels >> &aThat player cannot be found! Are they online?"));
 			}
 			else {
-				Maps.duelData.add(player.getUniqueId().toString()+":"+target.getUniqueId().toString()+":"+System.currentTimeMillis());
-				player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&b&lGrandKit Duels >> &aYour duel request was sent to &l"+target.getName()+"&a! They have 120 seconds to accept."));
+				Duels.requestDuel(player, target);
 			}
 			
 		}
